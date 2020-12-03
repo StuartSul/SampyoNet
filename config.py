@@ -1,12 +1,12 @@
 ## Built-in packages
 import getopt
-import joblib
 import json
 import os
 import sys
 
 ## Third-party packages
 from PIL import Image
+import joblib
 import numpy as np
 import tqdm
 
