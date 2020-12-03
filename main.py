@@ -91,8 +91,8 @@ if __name__ == '__main__':
 
         for record in input_csv:
             output_csv.write(record.replace('\n', ','))
-            prediction = prediction[record.split(',')[0]]
-            output_csv.write('{}'.format(prediction) + '\n')
+            _prediction = prediction[record.split(',')[0]]
+            output_csv.write('{}'.format(_prediction) + '\n')
             
         input_csv.close()
         output_csv.close()
