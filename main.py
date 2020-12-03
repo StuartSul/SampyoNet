@@ -69,7 +69,7 @@ if __name__ == '__main__':
     if 'weights_path' in locals() and 'image_path' in locals():
         prediction = predict_image(image_path, weights_path)
         print('==================================================================')
-        print('Prediction on {}, using weights {}'.format(image_path, weights_path))
+        print('Prediction on <{}>, using <{}>'.format(image_path, weights_path))
         print('Prediction : {}'.format(prediction))
         print('==================================================================')
 
@@ -95,8 +95,8 @@ if __name__ == '__main__':
         output_csv.close()
 
         print('==================================================================')
-        print('Prediction on {}, using weights {}'.format(csv_path, weights_path))
-        print('Prediction saved to {}'.format(output_csv_path))
+        print('Prediction on <{}>, using <{}>'.format(csv_path, weights_path))
+        print('Prediction saved to <{}>'.format(output_csv_path))
         print('==================================================================')
 
     else:
