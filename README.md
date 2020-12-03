@@ -36,7 +36,7 @@ Convolutional neural network developed by Seoul National University for Sampyo C
 
 `config.py` has all the required import statements and global parameters which should not be modified.
 
-`requirements.txt` lists all dependencies.
+`requirements.txt` lists all the dependencies.
 
 `models/` is a directory with all pretrained weights in it.
 
