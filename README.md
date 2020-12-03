@@ -4,7 +4,7 @@ Convolutional neural network developed by Seoul National University for Sampyo C
 
 
 
-### Instruction
+### Instructions
 
 1. Using Python 3, download all the requirements via requirements.txt
 
