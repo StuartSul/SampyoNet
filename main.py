@@ -1,8 +1,9 @@
 from config import *
 from model import *
 
-## Force the usage of CPU:
+## Set TF environment variables
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 
 ## Predict on one image
@@ -52,7 +53,7 @@ def predict_csv(csv_path, weights_path):
 ## Direct execution from the command line
 if __name__ == '__main__':
 
-    help_message = "python3 main.py -w weights_path.hdf5 -i image_path.jpg OR -a csv_path.csv"
+    help_message = 'python3 main.py -w weights_path.hdf5 -i image_path.jpg OR -a csv_path.csv'
 
     argv = sys.argv[1:]
     opts, args = getopt.getopt(argv,"i:w:a:")
@@ -67,20 +68,16 @@ if __name__ == '__main__':
     
     if 'weights_path' in locals() and 'image_path' in locals():
         prediction = predict_image(image_path, weights_path)
-        print("======================================")
-        print('Prediction :', prediction)
-        print("======================================")
+        print('==================================================================')
+        print('Prediction on {}, using weights {}'.format(image_path, weights_path))
+        print('Prediction : {}'.format(prediction))
+        print('==================================================================')
 
     elif 'weights_path' in locals() and 'csv_path' in locals():
+        prediction = predict_csv(csv_path, weights_path)
+
         input_csv_path = csv_path
         output_csv_path = csv_path.replace('.csv', '_prediction.csv')
-            
-        print("======================================")
-        print("Predicting on " + input_csv_path)
-        print("======================================")
-        
-        prediction = predict_csv(input_csv_path, weights_path)
-
         input_csv = open(input_csv_path, 'r')
         output_csv = open(output_csv_path, 'w')
         
@@ -96,6 +93,11 @@ if __name__ == '__main__':
             
         input_csv.close()
         output_csv.close()
+
+        print('==================================================================')
+        print('Prediction on {}, using weights {}'.format(csv_path, weights_path))
+        print('Prediction saved to {}'.format(output_csv_path))
+        print('==================================================================')
 
     else:
         print(help_message)
