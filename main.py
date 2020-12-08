@@ -3,7 +3,7 @@ from model import *
 
 ## Set TF environment variables
 os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 
 ## Predict on one image
