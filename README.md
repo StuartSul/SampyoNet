@@ -38,7 +38,7 @@ Convolutional neural network developed by Seoul National University for Sampyo C
 
 `requirements.txt` lists all the dependencies.
 
-`models/` is a directory with all pretrained weights in it.
+`models/` is a directory with all pretrained weights in it. Our main model is `2_largfac.hdf5`
 
 
 
