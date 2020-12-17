@@ -38,9 +38,13 @@ Convolutional neural network developed by Seoul National University for Sampyo C
 
 `config.py` has all the required import statements and global parameters which should not be modified.
 
+`brightness.py` contains the functions which calculate the brightness of the input image.
+
 `requirements.txt` lists all the dependencies.
 
 `models/` is a directory with all pretrained weights in it. Our main model is `2_largfac.hdf5`
+
+`preprocess/` is a directory with sources used in preprocessing stage.
 
 
 
