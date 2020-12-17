@@ -6,7 +6,7 @@ Convolutional neural network developed by Seoul National University for Sampyo C
 
 ### Instructions
 
-1. Using Python 3, download all the requirements via requirements.txt
+1. Using Python 3, download all the requirements via `requirements.txt`.
 
    ```bash
    python3 -m pip install -r requirements.txt
@@ -25,6 +25,8 @@ Convolutional neural network developed by Seoul National University for Sampyo C
    ```
 
 4. Implement into applications using the wrapper function `predict_image` in `main.py`
+
+5. To further train the model, TensorFlow training script must be added. This is just a few more lines of code which can be written very easily. The code is not included here for simplicity.
 
 
 
